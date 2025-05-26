@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MEET-THE-TEAM</title>
+  <style>
+    * {
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: black;
+      margin: 30px 40px;
+    }
+
+    .team-heading {
+      text-align: center;
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 50px;
+      color: #1e272e;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      background: #FFA116;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .wrapper {
+      perspective: 3000px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      width: 350px;
+      height: 500px;
+      transform-style: preserve-3d;
+      transition: transform 0.6s ease-in-out;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+        -5px -5px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 15px;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: rotateY(180deg);
+    }
+
+    .front-page,
+    .back-page {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+    }
+
+    .front-page {
+      background-size: cover;
+      background-position: center;
+      border: 4px solid white; /* White border for images */
+      box-sizing: border-box;
+    }
+
+    .card-info {
+      position: absolute;
+      bottom: 50px;
+      left: 45px;
+      color: #fff;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .card-subtitle {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      color: #0fbcf9;
+    }
+
+    .back-page {
+      background-color: #FFA116;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: rotateY(180deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .card-content {
+      text-align: center;
+      max-width: 300px;
+    }
+
+    .card-content h2 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      height: 30px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+      transform: scale(1.2);
+    }
+
+    /* ====== MEDIA QUERIES FOR RESPONSIVENESS ====== */
+    @media (max-width: 768px) {
+      body {
+        margin: 20px 15px;
+      }
+      .team-heading {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
+      .card {
+        width: 90vw; /* almost full width on tablets/small screens */
+        height: auto; /* let height adjust */
+      }
+      .card-content {
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .team-heading {
+        font-size: 2rem;
+        letter-spacing: 2px;
+      }
+      .card {
+        width: 95vw; /* almost full width on mobile */
+        height: auto;
+      }
+      .card-content h2 {
+        font-size: 1.5rem;
+      }
+      .card-content p {
+        font-size: 0.9rem;
+      }
+      .card-info {
+        left: 20px;
+        bottom: 30px;
+      }
+      .card-title {
+        font-size: 1.5rem;
+      }
+      .social-icons a img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="team-heading">MEET THE TEAM</h1>
+
+  <div class="wrapper">
+    <!-- AMAN VERMA -->
+    <div class="card">
+      <div
+        class="front-page"
+        style="background-image: url('https://media.istockphoto.com/id/840531052/photo/smiling-businessman-or-worker-standing-in-suit-near-office-building.jpg?s=612x612&w=0&k=20&c=15m58u4P5X-hznFRlhPCI-nGOdZBxqVktfXS1vS98yQ=');"
+      >
+        <div class="card-info">
+          <h2 class="card-title">AMAN VERMA</h2>
+        </div>
+      </div>
+      <div class="back-page">
+        <div class="card-content">
+          <h2>FRONT-END DEVELOPER</h2>
+          <p>
+            Aman is a passionate coder who works immersively on the
+            front-end domain and is familiar with React, HTML, CSS, and Angular.
+          </p>
+          <div class="social-icons">
+            <a href="https://github.com/amanverma" target="_blank"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+                alt="GitHub"
+            /></a>
+            <a href="https://www.linkedin.com/in/amanverma" target="_blank"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                alt="LinkedIn"
+            /></a>
+            <a href="https://leetcode.com/amanverma" target="_blank"
+              ><img
+                src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                alt="LeetCode"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANKITA SHARMA -->
+    <div class="card">
+      <div
+        class="front-page"
+        style="background-image: url('https://img.freepik.com/premium-photo/hispanic-smiling-toothy-latino-indian-successful-confident-arabian-businesswoman-worker-lady-boss-fe_820340-34294.jpg?semt=ais_hybrid&w=740');"
+      >
+        <div class="card-info">
+          <h2 class="card-title">ANKITA SHARMA</h2>
+        </div>
+      </div>
+      <div class="back-page">
+        <div class="card-content">
+          <h2>BACK-END DEVELOPER</h2>
+          <p>
+            Ankita is a backend expert who designs scalable APIs and handles
+            complex logic using Node.js, Express, and databases like MongoDB and
+            MySQL.
+          </p>
+          <div class="social-icons">
+            <a href="https://github.com/ankita" target="_blank"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+                alt="GitHub"
+            /></a>
+            <a href="https://www.linkedin.com/in/ankita" target="_blank"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                alt="LinkedIn"
+            /></a>
+            <a href="https://leetcode.com/ankita" target="_blank"
+              ><img
+                src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                alt="LeetCode"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEHAL SINGH -->
+    <div class="card">
+      <div
+        class="front-page"
+        style="background-image: url('https://img.freepik.com/free-photo/successful-businessman_1098-18155.jpg?semt=ais_hybrid&w=740');"
+      >
+        <div class="card-info">
+          <h2 class="card-title">NEHAL SINGH</h2>
+        </div>
+      </div>
+      <div class="back-page">
+        <div class="card-content">
+          <h2>UI/UX DESIGNER</h2>
+          <p>
+            Nehal brings interfaces to life with clean UI and intuitive UX.
+            Skilled in Figma, Adobe XD, and design systems with attention to user
+            experience.
+          </p>
+          <div class="social-icons">
+            <a href="https://github.com/nehal" target="_blank"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+                alt="GitHub"
+            /></a>
+            <a href="https://www.linkedin.com/in/nehal" target="_blank"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                alt="LinkedIn"
+            /></a>
+            <a href="https://leetcode.com/nehal" target="_blank"
+              ><img
+                src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                alt="LeetCode"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
